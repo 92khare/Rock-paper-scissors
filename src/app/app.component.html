@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="gameHeader">
+  <h1>
+  {{ title }}!
+  </h1>
+  </div>
+
+  <div id="gameContent">
+<div class="gameScoreCard" (click)="resetGame()">
+  <div id="userlabel" class="badge">
+    User
+  </div>
+  <div id="complabel" class="badge">Comp</div>
+  <span id="userScore">{{userScore}}</span>:<span id="compScore">{{compScore}}</span>
+    </div>
+<div id="gameResult">
+<p [innerHTML]="gameText"></p>
+</div>
+<div id="gameActions" >
+<div class="choice" (click)="userChoice('r')" id="r">
+<img src="assets/rock.jpg" class="choiceImage" alt="rockImage">
+
+</div>
+<div  class="choice" (click)="userChoice('p')" id="p">
+    <img src="assets/paper.jpg" class="choiceImage" alt="rockImage">
+  </div>
+
+  <div  class="choice" (click)="userChoice('s')" id="s">
+      <img src="assets/scissors.jpg" class="choiceImage" alt="rockImage">
+    </div>
+    
+
+
+</div>
+<div class="gameText">
+    <p>Make your move !!!</p>
+
+</div>
+  </div>
+</div>
